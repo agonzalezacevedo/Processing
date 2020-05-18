@@ -19,9 +19,42 @@ public class Formas extends PApplet {
     //Method that just runs one time
     @Override
     public void setup() {
-        //Main background components
         background(5, 63, 108);
-        //The fucking moon mate its not that difficult prof
+        drawBackground();
+    }
+
+    //Method that runs all the time
+    @Override
+    public void draw() {
+        //Full moon
+        if (key == '1') {
+            drawBackground();
+        }
+        //Third quarter
+        if (key == '2') {
+            drawBackground();
+            stroke(5, 63, 108);
+            fill(5, 63, 108);
+            rect(375, 83, 166, 335);
+        }
+        //New moon
+        if (key == '3') {
+            drawBackground();
+            stroke(29, 77, 115, 200);
+            fill(29, 77, 115, 200);
+            ellipse(375, 250, 320, 320);
+        }
+        //First quarter
+        if(key == '4'){
+            drawBackground();
+            stroke(5, 63, 108);
+            fill(5, 63, 108);
+            rect(208, 83, 166, 335);
+        }
+    }
+    public void drawBackground(){
+        //Main background components
+        //Biggest circle (the moon)
         stroke(255, 251, 251);
         fill(218, 236, 250);
         ellipse(375, 250, 330, 330);
@@ -46,44 +79,40 @@ public class Formas extends PApplet {
         fill(173, 200, 222);
         ellipse(400, 320, 50, 55);
         //Stars
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(80, 420, 10, 10);
 
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(140, 300, 5, 5);
 
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(60, 90, 15, 15);
 
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(610, 200, 8, 8);
 
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(700, 450, 20, 20);
 
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(550, 60, 12, 12);
 
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(660, 50, 4, 4);
 
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(340, 450, 16, 16);
 
-        stroke(242, 255, 147 );
-        fill(242, 255, 147 );
+        stroke(242, 255, 147);
+        fill(242, 255, 147);
         ellipse(130, 50, 23, 23);
-    }
-
-    @Override
-    public void draw() {
     }
 }
