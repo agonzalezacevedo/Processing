@@ -36,6 +36,17 @@ public class Imagenes extends PApplet {
     @Override
     public void draw() {
         image(gatoPonido, 0, 0, 500, 500);
-
+        if (mouseButton == RIGHT) {
+            image(gatoPonido, 0, 0, 500, 500);
+            image(cuchillo, mouseX - 210, mouseY - 250, 250, 300);
+        }
+        if (mouseButton == LEFT) {
+            tint(255, 66, 66);
+            image(gatoPonido, 0, 0, 500, 500);
+            image(enfadasion, 0, 0);
+            image(cuchillo, mouseX - 210, mouseY - 250, 250, 300);
+        } else {
+            tint(255, 255, 255);
+        }
     }
 }
