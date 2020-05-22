@@ -35,11 +35,26 @@ public class Imagenes extends PApplet {
 
     @Override
     public void draw() {
+        /*With this we can resize the knife
+        image(gatoPonido, 0, 0, 500, 500);
+        image(cuchillo, 10,10,mouseX, mouseY);
+        This part will change the color of the cat depending of where the mouse is
+        tint(mouseY,mouseX,mouseY);
+        image(gatoPonido, 0, 0, 500, 500);
+        image(cuchillo, 10,10,150, 300);
+        This change the opacity of the knife with the mouseX
+        image(gatoPonido,0,0,500,500);
+        tint(255,mouseX);
+        image(cuchillo,10,10,150, 300);*/
+        
+        //Here are conditionals for two actions
+        //If we press de right button of the mouse a knife that you can move will appear
         image(gatoPonido, 0, 0, 500, 500);
         if (mouseButton == RIGHT) {
             image(gatoPonido, 0, 0, 500, 500);
             image(cuchillo, mouseX - 210, mouseY - 250, 250, 300);
         }
+        //Pressing the left button the background will turn red and two more images will appear
         if (mouseButton == LEFT) {
             tint(255, 66, 66);
             image(gatoPonido, 0, 0, 500, 500);
